@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/photo_booth_of_exhibition/static/js/main.aa50981a.js",
+    "static/media/example.svg": "/photo_booth_of_exhibition/static/media/example.e847c16a9c1caed5989291d1ce6018f5.svg",
+    "static/media/snowBg.svg": "/photo_booth_of_exhibition/static/media/snowBg.b6b245406d1fc696461fe2d61738ca37.svg",
+    "static/media/snowBg-mobile.svg": "/photo_booth_of_exhibition/static/media/snowBg-mobile.e6de66d2459b524498e148e97c292496.svg",
+    "static/media/logo-mobile.svg": "/photo_booth_of_exhibition/static/media/logo-mobile.6aa5f1514ebaeb7cc7687c8cfc316d2b.svg",
+    "static/media/logo.svg": "/photo_booth_of_exhibition/static/media/logo.73bbe911d5b7efeb71f6925182eb24e2.svg",
+    "index.html": "/photo_booth_of_exhibition/index.html",
+    "static/media/check.svg": "/photo_booth_of_exhibition/static/media/check.ebb8c9ba9d8894d3686d606fcf048f7f.svg",
+    "static/media/sparkle.svg": "/photo_booth_of_exhibition/static/media/sparkle.701f8d386a180ce5b4b7748049fb03ef.svg",
+    "main.aa50981a.js.map": "/photo_booth_of_exhibition/static/js/main.aa50981a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.aa50981a.js"
+  ]
+}
