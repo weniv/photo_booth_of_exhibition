@@ -1,6 +1,7 @@
 {
     "name": "photo-booth",
     "version": "0.1.0",
+    "homepage": "https://weniv.github.io/photo_booth_of_exhibition/",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
