@@ -10,19 +10,19 @@ export default function StartPage() {
     return (
         <Wrap onClick={() => navigate("/frame")}>
             <Layout>
-                <img src={Logo} alt="" style={{ width: "434px" }} />
+                <img src={Logo} alt="" style={{ width: "217px" }} />
                 <H1>
                     <strong>위니브</strong>네컷
                 </H1>
                 <Message>
-                    <img src={Sparkle} alt="" />
+                    <img src={Sparkle} alt="" style={{ width: "26px" }} />
                     <p>
                         위니브와 함께하는 <strong>따뜻한 순간</strong>을 남겨보세요!
                     </p>
-                    <img src={Sparkle} alt="" />
+                    <img src={Sparkle} alt="" style={{ width: "26px" }} />
                 </Message>
                 <ExampleBox>
-                    <img src={Example} alt="" />
+                    <img src={Example} alt="" style={{ width: "475px" }} />
                 </ExampleBox>
             </Layout>
             <Guide>화면을 터치해 주세요</Guide>
@@ -36,8 +36,8 @@ const Wrap = styled.div`
 `;
 
 const Layout = styled.main`
-    height: calc(100vh - 288px);
-    padding: 215px 0 177px;
+    height: calc(100vh - 144px);
+    padding: 107px 0 88px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,9 +45,9 @@ const Layout = styled.main`
 
 const H1 = styled.h1`
     color: #9d0c0c;
-    font-size: 200px;
+    font-size: 100px;
     font-weight: 300;
-    margin: 82px 0 37px;
+    margin: 41px 0 19px;
     strong {
         font-weight: 700;
     }
@@ -56,13 +56,13 @@ const H1 = styled.h1`
 const Message = styled.div`
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 159px;
+    gap: 13px;
+    margin-bottom: 56px;
 
     p {
         position: relative;
         color: #b07d4f;
-        font-size: 60px;
+        font-size: 30px;
         font-weight: 500;
 
         strong {
@@ -73,11 +73,11 @@ const Message = styled.div`
             content: "";
             display: block;
             z-index: -2;
-            width: 1090px;
-            height: 30px;
+            width: 545px;
+            height: 15px;
             background: rgba(254, 241, 83, 0.4);
             position: absolute;
-            bottom: -8px;
+            bottom: -4px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -90,23 +90,23 @@ const ExampleBox = styled.div`
     &::before {
         content: "";
         display: block;
-        width: 38px;
-        height: 83px;
+        width: 19px;
+        height: 42px;
         background: #9d0c0c;
         transform: rotate(45deg) translateX(-50%);
         position: absolute;
-        top: -33px;
+        top: -17px;
         left: 50%;
     }
 `;
 
 const Guide = styled.div`
     width: 100vw;
-    height: 288px;
+    height: 144px;
     background: #9d0c0c;
     color: #e9e4d8;
     text-align: center;
-    font-size: 110px;
+    font-size: 55px;
     font-weight: 700;
-    line-height: 288px;
+    line-height: 144px;
 `;
