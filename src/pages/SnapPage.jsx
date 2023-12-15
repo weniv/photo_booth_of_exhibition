@@ -20,17 +20,29 @@ export default function SnapPage() {
 }
 
 const Layout = styled.main`
-    height: calc(100vh - 288px);
-    padding: 219px 0 212px;
+    height: calc(100vh - 144px);
+    padding: 109px 0 106px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 76px;
+    gap: 38px;
+`;
+
+const Timer = styled.div`
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+    background: #fff;
+    color: #9d0c0c;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 92px;
 `;
 
 const Video = styled.video`
-    width: 1262px;
-    height: 1584px;
+    width: 631px;
+    height: 792px;
     object-fit: cover;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg); /* Safari and Chrome */
@@ -41,29 +53,17 @@ const Video = styled.video`
 const Count = styled.p`
     color: #9d0c0c;
     text-align: center;
-    font-size: 76.8px;
+    font-size: 38px;
     font-weight: 700;
-`;
-
-const Timer = styled.div`
-    width: 185px;
-    height: 185px;
-    border-radius: 19px;
-    background: #fff;
-    color: #9d0c0c;
-    text-align: center;
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 185px;
 `;
 
 const Guide = styled.div`
     width: 100vw;
-    height: 288px;
+    height: 144px;
     background: #9d0c0c;
     color: #e9e4d8;
     text-align: center;
-    font-size: 110px;
+    font-size: 55px;
     font-weight: 700;
-    line-height: 288px;
+    line-height: 144px;
 `;

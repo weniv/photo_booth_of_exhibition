@@ -16,18 +16,18 @@ function FrameButton({ frame, id, saveFrame }) {
 }
 
 const FrameWrap = styled.div`
-    width: 570px;
+    width: 285px;
 
     label {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 34px;
+        gap: 17px;
 
         input {
             appearance: none;
-            width: 54px;
-            height: 54px;
+            width: 27px;
+            height: 27px;
             background-color: #c9c9c9;
             border-radius: 50%;
             cursor: pointer;
@@ -36,8 +36,8 @@ const FrameWrap = styled.div`
                 &::after {
                     content: "";
                     display: block;
-                    width: 54px;
-                    height: 54px;
+                    width: 27px;
+                    height: 27px;
                     background-image: url(${checkIcon});
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
@@ -46,7 +46,7 @@ const FrameWrap = styled.div`
         }
 
         img {
-            width: 570px;
+            width: 100%;
         }
     }
 `;
@@ -87,26 +87,26 @@ export default function FramePage() {
 }
 
 const Layout = styled.main`
-    height: calc(100vh - 288px);
-    padding: 247px 0 227px;
+    height: calc(100vh - 144px);
+    padding: 123px 0 113px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 84px;
+    gap: 42px;
 `;
 
 const FlexBox = styled.div`
     display: flex;
-    gap: 47px;
+    gap: 23px;
 `;
 
 const Guide = styled.div`
     width: 100vw;
-    height: 288px;
+    height: 144px;
     background: #9d0c0c;
     color: #e9e4d8;
     text-align: center;
-    font-size: 110px;
+    font-size: 55px;
     font-weight: 700;
-    line-height: 288px;
+    line-height: 144px;
 `;
