@@ -52,7 +52,13 @@ jobs:
                   npm install
                   npm run build
               env:
-                  PROJECT_ID: ${{ secrets.PROJECT_ID }}
+                  REACT_APP_FB_API_KEY: ${{ secrets.REACT_APP_FB_API_KEY }}
+                  REACT_APP_FB_AUTH_DOMAIN: ${{ secrets.REACT_APP_FB_AUTH_DOMAIN }}
+                  REACT_APP_FB_PROJECT_ID: ${{ secrets.REACT_APP_FB_PROJECT_ID }}
+                  REACT_APP_FB_STORAGE_BUCKET: ${{ secrets.REACT_APP_FB_STORAGE_BUCKET }}
+                  REACT_APP_FB_MESSAGE_ID: ${{ secrets.REACT_APP_FB_MESSAGE_ID }}
+                  REACT_APP_FB_APP_ID: ${{ secrets.REACT_APP_FB_APP_ID }}
+                  REACT_APP_FB_MEASUREMENT_ID: ${{ secrets.REACT_APP_FB_MEASUREMENT_ID }}
 
             - name: Deploy to gh-pages branch
               uses: peaceiris/actions-gh-pages@v3
