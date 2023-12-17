@@ -99,7 +99,7 @@ export default function PrintPage({ result }) {
                 <FlexBox>
                     {result.map((item, idx) => (
                         <div key={idx}>
-                            <img className="item" id={idx} src={item} />
+                            <img className="item" id={idx} src={item} alt="" />
                         </div>
                     ))}
                 </FlexBox>
