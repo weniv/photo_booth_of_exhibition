@@ -7,6 +7,10 @@ import { storage } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 import Spinner from "../assets/Spinner.gif";
+import Type1 from "../assets/Type1.svg";
+import Type2 from "../assets/Type2.svg";
+import Type3 from "../assets/Type3.svg";
+import Type4 from "../assets/Type4.svg";
 
 export default function PrintPage({ result }) {
     let idRef = useRef(1);
@@ -16,6 +20,20 @@ export default function PrintPage({ result }) {
     const frameType = localStorage.getItem("frameType");
     const contentRef = useRef(null);
     const [imagesLoaded, setImagesLoaded] = useState(false);
+    const [CurrentFrame, serCurrentFrame] = useState(null);
+
+    useEffect(() => {
+        switch (frameType) {
+            case "Type1":
+                serCurrentFrame(Type1);
+            case "Type2":
+                serCurrentFrame(Type2);
+            case "Type3":
+                serCurrentFrame(Type3);
+            case "Type4":
+                serCurrentFrame(Type4);
+        }
+    }, []);
 
     const date = new Date();
     const createdDate = `${date.getFullYear()}${("0" + (date.getMonth() + 1)).slice(-2)}${("0" + date.getDate()).slice(-2)}`;
@@ -103,7 +121,7 @@ export default function PrintPage({ result }) {
                         </div>
                     ))}
                 </FlexBox>
-                <Frame src={process.env.PUBLIC_URL + `/images/${frameType}.svg`} alt="" />
+                <Frame src={CurrentFrame} alt="" />
             </ImgBox>
             <QrBox>
                 {console.log(qrValue)}
