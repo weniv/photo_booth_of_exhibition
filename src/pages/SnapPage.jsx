@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import html2canvas from "html2canvas";
 import styled from "styled-components";
 import sound from "../assets/camera.wav";
 
@@ -42,7 +41,6 @@ export default function SnapPage({ setResult }) {
         console.log("촬영되었습니다.");
         setPictures([...pictures, imageData]);
         setResult((prev) => [...prev, imageData]);
-        console.log(imageData);
     };
 
     // 타이머

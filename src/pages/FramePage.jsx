@@ -9,7 +9,7 @@ function FrameButton({ frame, id, saveFrame }) {
         <FrameWrap onClick={(e) => saveFrame(e)}>
             <label htmlFor={id}>
                 <input type="radio" id={id} name="frame" />
-                <img src={frame} style={{ background: "#D9D9D9" }} />
+                <img src={frame} style={{ background: "#D9D9D9" }} alt="" />
             </label>
         </FrameWrap>
     );
