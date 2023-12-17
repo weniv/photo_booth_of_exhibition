@@ -73,12 +73,12 @@ export default function FramePage() {
         <>
             <Layout>
                 <FlexBox>
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/type1.svg`} id="Type1" saveFrame={saveFrame} />
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/type2.svg`} id="Type2" saveFrame={saveFrame} />
+                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type1.svg`} id="Type1" saveFrame={saveFrame} />
+                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type2.svg`} id="Type2" saveFrame={saveFrame} />
                 </FlexBox>
                 <FlexBox>
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/type3.svg`} id="Type3" saveFrame={saveFrame} />
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/type4.svg`} id="Type4" saveFrame={saveFrame} />
+                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type3.svg`} id="Type3" saveFrame={saveFrame} />
+                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type4.svg`} id="Type4" saveFrame={saveFrame} />
                 </FlexBox>
             </Layout>
             <Guide>{frameType ? "프레임이 선택되었습니다" : "프레임을 선택해 주세요"}</Guide>
