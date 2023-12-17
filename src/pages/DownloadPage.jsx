@@ -1,8 +1,36 @@
 import styled from "styled-components";
 import SnowBg from "../assets/snowBg-mobile.svg";
 import Logo from "../assets/logo-mobile.svg";
+import { useLocation } from "react-router-dom";
 
 export default function DownloadPage() {
+    const location = useLocation();
+    const path = location.pathname.split("download/")[1];
+    const query = location.search;
+    const url = "https://firebasestorage.googleapis.com/v0/b/photo-booth-5ba8e.appspot.com/o/images" + path + query;
+
+    const downloadFile = () => {
+        fetch(url, { method: "GET" })
+            .then((res) => {
+                return res.blob();
+            })
+            .then((blob) => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "weniv4cut";
+                document.body.appendChild(a);
+                a.click();
+                setTimeout((_) => {
+                    window.URL.revokeObjectURL(url);
+                }, 60000);
+                a.remove();
+            })
+            .catch((err) => {
+                console.error("err: ", err);
+            });
+    };
+
     return (
         <Wrap>
             <Bg>
@@ -13,8 +41,10 @@ export default function DownloadPage() {
                     </h2>
                 </Header>
                 <Snow>
-                    <img src={`${process.env.PUBLIC_URL}/images/type1.svg`} style={{ background: "#D9D9D9" }} />
-                    <DownBtn>Download</DownBtn>
+                    <img src={url} alt="" />
+                    <DownBtn type="button" onClick={downloadFile}>
+                        Download
+                    </DownBtn>
                 </Snow>
             </Bg>
         </Wrap>
