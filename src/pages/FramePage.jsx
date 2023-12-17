@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Type1 from "../assets/Type1.svg";
+import Type2 from "../assets/Type2.svg";
+import Type3 from "../assets/Type3.svg";
+import Type4 from "../assets/Type4.svg";
 
 import checkIcon from "../assets/check.svg";
 
@@ -73,12 +77,12 @@ export default function FramePage() {
         <>
             <Layout>
                 <FlexBox>
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type1.svg`} id="Type1" saveFrame={saveFrame} />
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type2.svg`} id="Type2" saveFrame={saveFrame} />
+                    <FrameButton frame={Type1} id="Type1" saveFrame={saveFrame} />
+                    <FrameButton frame={Type2} id="Type2" saveFrame={saveFrame} />
                 </FlexBox>
                 <FlexBox>
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type3.svg`} id="Type3" saveFrame={saveFrame} />
-                    <FrameButton frame={`${process.env.PUBLIC_URL}/images/Type4.svg`} id="Type4" saveFrame={saveFrame} />
+                    <FrameButton frame={Type3} id="Type3" saveFrame={saveFrame} />
+                    <FrameButton frame={Type4} id="Type4" saveFrame={saveFrame} />
                 </FlexBox>
             </Layout>
             <Guide>{frameType ? "프레임이 선택되었습니다" : "프레임을 선택해 주세요"}</Guide>
