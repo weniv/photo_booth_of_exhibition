@@ -1,18 +1,82 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import html2canvas from "html2canvas";
 import styled from "styled-components";
+import sound from "../assets/camera.wav";
 
-export default function SnapPage() {
+export default function SnapPage({ setResult }) {
+    const navigate = useNavigate();
     const [time, setTime] = useState(10);
-
+    const [count, setCount] = useState(0);
     const [pictures, setPictures] = useState([]);
+    const audio = new Audio(sound);
     const videoRef = useRef(null);
+    const canvasRef = useRef(null);
+
+    // 비디오 재생
+    const startVideo = async () => {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        if (videoRef && videoRef.current && !videoRef.current.srcObject) {
+            videoRef.current.srcObject = stream;
+        }
+    };
+
+    useEffect(() => {
+        startVideo();
+    }, []);
+
+    const takePhoto = () => {
+        audio.play();
+
+        const width = 640;
+        const height = 450;
+
+        let video = videoRef.current;
+        let canvas = canvasRef.current;
+
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(video, 0, 0);
+
+        let imageData = canvas.toDataURL("image/png");
+        console.log("촬영되었습니다.");
+        setPictures([...pictures, imageData]);
+        setResult((prev) => [...prev, imageData]);
+        console.log(imageData);
+    };
+
+    // 타이머
+    const timer = () => {
+        const sec = setTimeout(() => {
+            setTime(time - 1);
+        }, 1000);
+        if (time === 0) {
+            takePhoto();
+            clearInterval(sec);
+            setTime(10);
+            setInterval(sec);
+            setCount((prev) => prev + 1);
+        } else if (pictures.length === 4) {
+            clearInterval(sec);
+            setTimeout(() => {
+                navigate("/print");
+            }, 1300);
+        }
+    };
+
+    useEffect(() => {
+        timer();
+    }, [time]);
 
     return (
         <>
             <Layout>
                 <Timer>{time}</Timer>
-                <Video autoPlay ref={videoRef} />
-                <Count>(1/4)</Count>
+                <VideoCont>
+                    <video autoPlay ref={videoRef}></video>
+                    <canvas ref={canvasRef} style={{ display: "none" }}></canvas>
+                </VideoCont>
+                <Count>({count}/4)</Count>
             </Layout>
             <Guide>촬영 중 입니다</Guide>
         </>
@@ -40,14 +104,20 @@ const Timer = styled.div`
     line-height: 92px;
 `;
 
-const Video = styled.video`
+const VideoCont = styled.div`
     width: 631px;
     height: 792px;
-    object-fit: cover;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg); /* Safari and Chrome */
-    -moz-transform: rotateY(180deg);
     background-color: #d9d9d9;
+    overflow: hidden;
+
+    video {
+        // width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg);
+    }
 `;
 
 const Count = styled.p`
