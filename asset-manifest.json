@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/photo_booth_of_exhibition/static/js/main.e8b5fe8d.js",
+    "main.js": "/photo_booth_of_exhibition/static/js/main.7818997c.js",
     "static/media/example.svg": "/photo_booth_of_exhibition/static/media/example.e847c16a9c1caed5989291d1ce6018f5.svg",
     "static/media/camera.wav": "/photo_booth_of_exhibition/static/media/camera.9556658e71543bf1bd7b.wav",
     "static/media/Spinner.gif": "/photo_booth_of_exhibition/static/media/Spinner.991ac874db1bf8a02686.gif",
@@ -11,9 +11,9 @@
     "index.html": "/photo_booth_of_exhibition/index.html",
     "static/media/check.svg": "/photo_booth_of_exhibition/static/media/check.ebb8c9ba9d8894d3686d606fcf048f7f.svg",
     "static/media/sparkle.svg": "/photo_booth_of_exhibition/static/media/sparkle.701f8d386a180ce5b4b7748049fb03ef.svg",
-    "main.e8b5fe8d.js.map": "/photo_booth_of_exhibition/static/js/main.e8b5fe8d.js.map"
+    "main.7818997c.js.map": "/photo_booth_of_exhibition/static/js/main.7818997c.js.map"
   },
   "entrypoints": [
-    "static/js/main.e8b5fe8d.js"
+    "static/js/main.7818997c.js"
   ]
 }
