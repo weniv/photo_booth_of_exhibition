@@ -20,18 +20,28 @@ export default function PrintPage({ result }) {
     const frameType = localStorage.getItem("frameType");
     const contentRef = useRef(null);
     const [imagesLoaded, setImagesLoaded] = useState(false);
-    const [CurrentFrame, serCurrentFrame] = useState(null);
+    const [currentFrame, serCurrentFrame] = useState(null);
+
+    console.log(frameType);
 
     useEffect(() => {
         switch (frameType) {
             case "Type1":
                 serCurrentFrame(Type1);
+                break;
             case "Type2":
                 serCurrentFrame(Type2);
+                break;
             case "Type3":
                 serCurrentFrame(Type3);
+                break;
             case "Type4":
                 serCurrentFrame(Type4);
+                break;
+            default:
+                // 기본값 설정 (옵션)
+                serCurrentFrame(null);
+                break;
         }
     }, []);
 
@@ -121,7 +131,7 @@ export default function PrintPage({ result }) {
                         </div>
                     ))}
                 </FlexBox>
-                <Frame src={CurrentFrame} alt="" />
+                <Frame src={currentFrame} alt="" />
             </ImgBox>
             <QrBox>
                 {console.log(qrValue)}
