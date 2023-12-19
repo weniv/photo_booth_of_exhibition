@@ -58,7 +58,7 @@ export default function PrintPage({ result }) {
         const result = contentRef.current;
 
         try {
-            const canvas = await html2canvas(result, { scale: 2 });
+            const canvas = await html2canvas(result, { scale: 1 });
             canvas.toBlob((myBlob) => {
                 const myFile = new File([myBlob], `${createdDate}-${idRef.current}.jpeg`, {
                     type: myBlob && myBlob.type,
