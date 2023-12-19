@@ -176,10 +176,11 @@ const FlexBox = styled.div`
 
         img {
             transform: scaleX(-1);
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // height: 100%;
+            width: 100%;
         }
     }
 `;

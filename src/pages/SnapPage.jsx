@@ -75,6 +75,9 @@ export default function SnapPage({ setResult }) {
                     <canvas ref={canvasRef} style={{ display: "none" }}></canvas>
                 </VideoCont>
                 <Count>({count}/4)</Count>
+                {/* <div>
+                    <PicWrap>{pictures && pictures.map((pic, idx) => <Picture src={pic} key={idx} alt={`${idx + 1}번 사진`}></Picture>)}</PicWrap>
+                </div> */}
             </Layout>
             <Guide>촬영 중 입니다</Guide>
         </>
@@ -109,8 +112,8 @@ const VideoCont = styled.div`
     overflow: hidden;
 
     video {
-        // width: 100%;
-        height: 100%;
+        width: 100%;
+        // height: 100%;
         object-fit: cover;
         transform: rotateY(180deg);
         -webkit-transform: rotateY(180deg); /* Safari and Chrome */
@@ -135,3 +138,15 @@ const Guide = styled.div`
     font-weight: 700;
     line-height: 144px;
 `;
+
+// const PicWrap = styled.div`
+//     width: calc(879.48px);
+//     height: calc(1299.64px);
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-content: space-between;
+//     /* background-color: pink; */
+// `;
+
+// const Picture = styled.img``;
