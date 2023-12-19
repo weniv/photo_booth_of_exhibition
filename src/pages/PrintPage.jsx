@@ -180,8 +180,7 @@ const FlexBox = styled.div`
             // position: absolute;
             // top: 0;
             // left: 0;
-            // height: 100%;
-            width: 248px;
+            height: 100%;
         }
     }
 `;
