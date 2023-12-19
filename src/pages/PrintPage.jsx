@@ -7,10 +7,10 @@ import { storage } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 import Spinner from "../assets/Spinner.gif";
-import Type1 from "../assets/Type1.svg";
-import Type2 from "../assets/Type2.svg";
-import Type3 from "../assets/Type3.svg";
-import Type4 from "../assets/Type4.svg";
+import Type1 from "../assets/Type1.png";
+import Type2 from "../assets/Type2.png";
+import Type3 from "../assets/Type3.png";
+import Type4 from "../assets/Type4.png";
 import { useNavigate } from "react-router-dom";
 
 export default function PrintPage({ result }) {
