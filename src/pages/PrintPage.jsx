@@ -164,7 +164,7 @@ const ImgBox = styled.div`
 
 const FlexBox = styled.div`
     width: 100%;
-    padding: 109px 5px 109px;
+    padding: 109px 31px;
     display: flex;
     gap: 11px;
     flex-wrap: wrap;
