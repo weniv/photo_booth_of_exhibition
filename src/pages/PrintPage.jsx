@@ -163,7 +163,8 @@ const ImgBox = styled.div`
 `;
 
 const FlexBox = styled.div`
-    margin: 109px 5px;
+    width: 100%;
+    margin: 109px 5px 109px;
     display: flex;
     gap: 11px;
     flex-wrap: wrap;
@@ -179,8 +180,9 @@ const FlexBox = styled.div`
             // position: absolute;
             // top: 0;
             // left: 0;
-            height: 100%;
-            // width: 100%;
+            // height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 `;
