@@ -84,7 +84,7 @@ export default function SnapPage({ setResult }) {
 }
 
 const Layout = styled.main`
-    height: calc(100vh - 144px);
+    height: calc(100vh - 168px);
     padding: 109px 0 106px;
     display: flex;
     flex-direction: column;
@@ -129,13 +129,13 @@ const Count = styled.p`
 
 const Guide = styled.div`
     width: 100vw;
-    height: 144px;
+    height: 168px;
+    padding: 37px 0 77px;
     background: #9d0c0c;
     color: #e9e4d8;
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 700;
-    line-height: 144px;
 `;
 
 // const PicWrap = styled.div`

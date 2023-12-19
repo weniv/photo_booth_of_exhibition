@@ -45,6 +45,7 @@ export default function DownloadPage() {
                     <DownBtn type="button" onClick={downloadFile}>
                         Download
                     </DownBtn>
+                    <Message>즉시 다운로드해주세요 🙏</Message>
                 </Snow>
             </Bg>
         </Wrap>
@@ -54,13 +55,13 @@ export default function DownloadPage() {
 const Wrap = styled.div`
     width: 100vw;
     height: 100vh;
-    background: #fff;
-    padding: 44px 0 83px;
+    background: #e9e4d8;
+    padding: 44px 0 0;
 `;
 
 const Bg = styled.main`
     background: #e9e4d8;
-    height: calc(100vh - 127px);
+    height: calc(100vh - 44px);
 `;
 
 const Header = styled.header`
@@ -82,13 +83,11 @@ const Header = styled.header`
 `;
 
 const Snow = styled.main`
-    width: 100%;
-    height: calc(100vh-224px);
+    height: 100%;
     background-image: url(${SnowBg});
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
 
     img {
         margin-top: 70px;
@@ -97,6 +96,7 @@ const Snow = styled.main`
 `;
 
 const DownBtn = styled.button`
+    margin: 28px 0 22px;
     border: none;
     cursor: pointer;
     padding: 8px 24px;
@@ -106,5 +106,11 @@ const DownBtn = styled.button`
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 70px;
+`;
+
+const Message = styled.p`
+    color: #9d0c0c;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
 `;

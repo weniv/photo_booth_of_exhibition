@@ -36,7 +36,7 @@ const Wrap = styled.div`
 `;
 
 const Layout = styled.main`
-    height: calc(100vh - 144px);
+    height: calc(100vh - 168px);
     padding: 107px 0 88px;
     display: flex;
     flex-direction: column;
@@ -102,11 +102,11 @@ const ExampleBox = styled.div`
 
 const Guide = styled.div`
     width: 100vw;
-    height: 144px;
+    height: 168px;
+    padding: 37px 0 77px;
     background: #9d0c0c;
     color: #e9e4d8;
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 700;
-    line-height: 144px;
 `;

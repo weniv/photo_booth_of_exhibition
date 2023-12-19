@@ -11,8 +11,10 @@ import Type1 from "../assets/Type1.svg";
 import Type2 from "../assets/Type2.svg";
 import Type3 from "../assets/Type3.svg";
 import Type4 from "../assets/Type4.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function PrintPage({ result }) {
+    const navigate = useNavigate();
     let idRef = useRef(1);
     const [imgUrl, setImgUrl] = useState("");
     const [isQr, setIsQr] = useState(false);
@@ -22,7 +24,7 @@ export default function PrintPage({ result }) {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const [currentFrame, serCurrentFrame] = useState(null);
 
-    console.log(frameType);
+    // console.log(frameType);
 
     useEffect(() => {
         switch (frameType) {
@@ -122,29 +124,38 @@ export default function PrintPage({ result }) {
     }, [imgUrl]);
 
     return (
-        <Wrap>
-            <ImgBox ref={contentRef}>
-                <FlexBox>
-                    {result.map((item, idx) => (
-                        <div key={idx}>
-                            <img className="item" id={idx} src={item} alt="" />
-                        </div>
-                    ))}
-                </FlexBox>
-                <Frame src={currentFrame} alt="" />
-            </ImgBox>
-            <QrBox>
-                {console.log(qrValue)}
-                <LoadingBox>{isQr && qrValue ? <QRCodeCanvas value={qrValue} size={53} /> : <img src={Spinner} style={{ width: "60px" }} alt="로딩중" />}</LoadingBox>
-            </QrBox>
-            <Message>QR코드를 통해 사진을 다운로드 하세요</Message>
-        </Wrap>
+        <>
+            <Wrap>
+                <ImgBox ref={contentRef}>
+                    <FlexBox>
+                        {result.map((item, idx) => (
+                            <div key={idx}>
+                                <img className="item" id={idx} src={item} alt="" />
+                            </div>
+                        ))}
+                    </FlexBox>
+                    <Frame src={currentFrame} alt="" />
+                </ImgBox>
+                <QrBox>
+                    {console.log(qrValue)}
+                    <LoadingBox>{isQr && qrValue ? <QRCodeCanvas value={qrValue} size={75} /> : <img src={Spinner} style={{ width: "89px" }} alt="로딩중" />}</LoadingBox>
+                </QrBox>
+                <Message>QR코드를 통해 사진을 다운로드 하세요</Message>
+            </Wrap>
+            <Guide
+                onClick={() => {
+                    navigate("/");
+                }}
+            >
+                처음으로 되돌아가기
+            </Guide>
+        </>
     );
 }
 
 const Wrap = styled.main`
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 168px);
     background-image: url(${SnowBg});
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -155,7 +166,7 @@ const Wrap = styled.main`
 
 const ImgBox = styled.div`
     position: relative;
-    margin-top: 178px;
+    margin-top: 93px;
     width: 570px;
     height: 855px;
     background: #d9d9d9;
@@ -196,12 +207,12 @@ const Frame = styled.img`
 `;
 
 const QrBox = styled.div`
-    width: 82px;
-    height: 82px;
-    border-radius: 5px;
+    width: 109px;
+    height: 109px;
+    border-radius: 7px;
     background: #a82626;
-    margin: 71px 0 45px;
-    padding: 7px;
+    margin: 30px 0 30px;
+    padding: 10px;
 `;
 
 const LoadingBox = styled.div`
@@ -210,7 +221,7 @@ const LoadingBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 3.375px;
+    border-radius: 4px;
 `;
 
 const Message = styled.p`
@@ -218,4 +229,15 @@ const Message = styled.p`
     font-size: 35px;
     font-weight: 700;
     line-height: 135%;
+`;
+
+const Guide = styled.div`
+    width: 100vw;
+    height: 168px;
+    padding: 37px 0 77px;
+    background: #9d0c0c;
+    color: #e9e4d8;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
 `;
