@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.js": "/photo_booth_of_exhibition/static/js/main.12f2b1e5.js",
+    "main.js": "/photo_booth_of_exhibition/static/js/main.d4cf827b.js",
     "static/media/Type2.svg": "/photo_booth_of_exhibition/static/media/Type2.1ae78ecf24fae76948fe4387c664463c.svg",
+    "static/media/Type2.png": "/photo_booth_of_exhibition/static/media/Type2.e35e589074fa537d57da.png",
     "static/media/example.svg": "/photo_booth_of_exhibition/static/media/example.e847c16a9c1caed5989291d1ce6018f5.svg",
+    "static/media/Type1.png": "/photo_booth_of_exhibition/static/media/Type1.cb05954c7eec339129bb.png",
     "static/media/camera.wav": "/photo_booth_of_exhibition/static/media/camera.9556658e71543bf1bd7b.wav",
     "static/media/Type1.svg": "/photo_booth_of_exhibition/static/media/Type1.9255428dcfb6587e0e42c3298e6aeb1e.svg",
     "static/media/Spinner.gif": "/photo_booth_of_exhibition/static/media/Spinner.991ac874db1bf8a02686.gif",
@@ -10,14 +12,16 @@
     "static/media/Type3.svg": "/photo_booth_of_exhibition/static/media/Type3.f8a10a0a0177970bf1e4d1d34407fc1c.svg",
     "static/media/snowBg.svg": "/photo_booth_of_exhibition/static/media/snowBg.b6b245406d1fc696461fe2d61738ca37.svg",
     "static/media/snowBg-mobile.svg": "/photo_booth_of_exhibition/static/media/snowBg-mobile.e6de66d2459b524498e148e97c292496.svg",
+    "static/media/Type3.png": "/photo_booth_of_exhibition/static/media/Type3.964b52aae7395168275b.png",
+    "static/media/Type4.png": "/photo_booth_of_exhibition/static/media/Type4.bf112c6c14471237d2cc.png",
     "static/media/logo-mobile.svg": "/photo_booth_of_exhibition/static/media/logo-mobile.6aa5f1514ebaeb7cc7687c8cfc316d2b.svg",
     "static/media/logo.svg": "/photo_booth_of_exhibition/static/media/logo.73bbe911d5b7efeb71f6925182eb24e2.svg",
     "index.html": "/photo_booth_of_exhibition/index.html",
     "static/media/check.svg": "/photo_booth_of_exhibition/static/media/check.ebb8c9ba9d8894d3686d606fcf048f7f.svg",
     "static/media/sparkle.svg": "/photo_booth_of_exhibition/static/media/sparkle.701f8d386a180ce5b4b7748049fb03ef.svg",
-    "main.12f2b1e5.js.map": "/photo_booth_of_exhibition/static/js/main.12f2b1e5.js.map"
+    "main.d4cf827b.js.map": "/photo_booth_of_exhibition/static/js/main.d4cf827b.js.map"
   },
   "entrypoints": [
-    "static/js/main.12f2b1e5.js"
+    "static/js/main.d4cf827b.js"
   ]
 }
