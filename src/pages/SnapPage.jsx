@@ -29,8 +29,8 @@ export default function SnapPage({ setResult }) {
 
         // const width = 640;
         // const height = 450;
-        const width = 248;
-        const height = 312;
+        const width = 640;
+        const height = 805;
 
         let video = videoRef.current;
         let canvas = canvasRef.current;
