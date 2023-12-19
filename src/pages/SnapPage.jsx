@@ -26,8 +26,8 @@ export default function SnapPage({ setResult }) {
 
     const takePhoto = () => {
         audio.play();
-        const width = 580;
-        const height = 730;
+        const width = 520;
+        const height = 655;
 
         let video = videoRef.current;
         let canvas = canvasRef.current;
