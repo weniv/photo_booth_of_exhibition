@@ -85,7 +85,13 @@ export default function FramePage() {
                     <FrameButton frame={Type4} id="Type4" saveFrame={saveFrame} />
                 </FlexBox>
             </Layout>
-            <Guide>{frameType ? "프레임이 선택되었습니다" : "프레임을 선택해 주세요"}</Guide>
+            <Guide
+                onClick={() => {
+                    navigate("/snap");
+                }}
+            >
+                {frameType ? "프레임이 선택되었습니다" : "프레임을 선택해 주세요"}
+            </Guide>
         </>
     );
 }
