@@ -3,9 +3,14 @@ import Logo from "../assets/logo.svg";
 import Sparkle from "../assets/sparkle.svg";
 import Example from "../assets/example.svg";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function StartPage() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.location.reload();
+    }, []);
 
     return (
         <Wrap onClick={() => navigate("/frame")}>
