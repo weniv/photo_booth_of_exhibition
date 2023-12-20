@@ -13,7 +13,7 @@ export default function SnapPage({ setResult }) {
     const canvasRef = useRef(null);
 
     useEffect(() => {
-        localStorage.setItem("isReloaded", "false");
+        localStorage.setItem("isReloaded", false);
     }, []);
 
     // 비디오 재생

@@ -10,10 +10,11 @@ export default function StartPage() {
     useEffect(() => {
         // 세션 스토리지를 체크하여 페이지가 이미 새로고침 되었는지 확인
         const isReloaded = localStorage.getItem("isReloaded");
+        // console.log(isReloaded);
 
-        if (!isReloaded) {
-            // 'isReloaded' 값이 없으면, 페이지를 새로고침하고, 값을 설정
-            localStorage.setItem("isReloaded", "true");
+        if (isReloaded === "false") {
+            console.log("새로고침");
+            localStorage.setItem("isReloaded", true);
             window.location.reload();
         }
     }, []);
