@@ -11,9 +11,9 @@ export default function StartPage() {
 
     useEffect(() => {
         if (isStart) {
+            localStorage.setItem("isStart", false);
             window.location.reload();
         }
-        localStorage.setItem("isStart", false);
     }, []);
 
     return (
