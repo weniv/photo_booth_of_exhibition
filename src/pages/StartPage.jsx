@@ -7,14 +7,16 @@ import { useEffect } from "react";
 
 export default function StartPage() {
     const navigate = useNavigate();
-    // const isStart = localStorage.getItem("isStart");
+    useEffect(() => {
+        // 세션 스토리지를 체크하여 페이지가 이미 새로고침 되었는지 확인
+        const isReloaded = localStorage.getItem("isReloaded");
 
-    // useEffect(() => {
-    //     if (isStart) {
-    //         localStorage.setItem("isStart", false);
-    //         window.location.reload();
-    //     }
-    // }, [isStart]);
+        if (!isReloaded) {
+            // 'isReloaded' 값이 없으면, 페이지를 새로고침하고, 값을 설정
+            localStorage.setItem("isReloaded", "true");
+            window.location.reload();
+        }
+    }, []);
 
     return (
         <Wrap onClick={() => navigate("/frame")}>

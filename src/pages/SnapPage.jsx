@@ -12,6 +12,10 @@ export default function SnapPage({ setResult }) {
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
 
+    useEffect(() => {
+        localStorage.setItem("isReloaded", "false");
+    }, []);
+
     // 비디오 재생
     const startVideo = async () => {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
