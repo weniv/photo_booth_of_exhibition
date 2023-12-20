@@ -7,14 +7,14 @@ import { useEffect } from "react";
 
 export default function StartPage() {
     const navigate = useNavigate();
-    const isStart = localStorage.getItem("isStart");
+    // const isStart = localStorage.getItem("isStart");
 
-    useEffect(() => {
-        if (isStart) {
-            localStorage.setItem("isStart", false);
-            window.location.reload();
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (isStart) {
+    //         localStorage.setItem("isStart", false);
+    //         window.location.reload();
+    //     }
+    // }, [isStart]);
 
     return (
         <Wrap onClick={() => navigate("/frame")}>
