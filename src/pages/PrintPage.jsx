@@ -144,6 +144,8 @@ export default function PrintPage({ result }) {
             </Wrap>
             <Guide
                 onClick={() => {
+                    localStorage.setItem("isStart", true);
+
                     navigate("/");
                 }}
             >

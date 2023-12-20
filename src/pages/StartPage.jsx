@@ -7,9 +7,13 @@ import { useEffect } from "react";
 
 export default function StartPage() {
     const navigate = useNavigate();
+    const isStart = localStorage.getItem("isStart");
 
     useEffect(() => {
-        window.location.reload();
+        if (isStart) {
+            window.location.reload();
+        }
+        localStorage.setItem("isStart", false);
     }, []);
 
     return (
