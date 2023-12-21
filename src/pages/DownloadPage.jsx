@@ -45,7 +45,16 @@ export default function DownloadPage() {
                     <DownBtn type="button" onClick={downloadFile}>
                         Download
                     </DownBtn>
-                    <Message>즉시 다운로드해주세요 🙏</Message>
+                    <Message>
+                        즉시 다운로드해주세요 🙏
+                        <br />
+                        <br />
+                    </Message>
+                    <Message2>
+                        아이폰인 경우
+                        <br />
+                        다운로드가 안된다면 사진을 꾸욱 눌러 저장해주세요!
+                    </Message2>
                 </Snow>
             </Bg>
         </Wrap>
@@ -56,7 +65,7 @@ const Wrap = styled.div`
     width: 100vw;
     height: 100vh;
     background: #e9e4d8;
-    padding: 44px 0 0;
+    // padding: 44px 0 0;
 `;
 
 const Bg = styled.main`
@@ -113,4 +122,13 @@ const Message = styled.p`
     text-align: center;
     font-size: 16px;
     font-weight: 500;
+    line-height: 24px;
+`;
+
+const Message2 = styled.p`
+    color: #9d0c0c;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
 `;
