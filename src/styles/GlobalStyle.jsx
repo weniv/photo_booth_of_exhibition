@@ -8,14 +8,22 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
     ${reset}
 
-    // :root {
-    //     --main-color: #ED7A3A;
-    //     --bg-color: #F3EBE0;
-    //     --white-color: #FFFFFF;
-    //     --gray-color: #D9D9D9
-    // }
+    :root {
+        --main-color: #6DF2CC;
+        --bg-color: #160E26;
+        --white-color: #FFFFFF;
+        --gray-lv2-color: #595F66;
+        --gray-lv3-color: #8D9299;
+    }
 
     * {
         box-sizing: border-box;
@@ -24,7 +32,28 @@ const GlobalStyles = createGlobalStyle`
     html {
         font-family: Pretendard;
         overflow: hidden;
-        background: #E9E4D8;
+        background: #160E26;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--main-color);
+        color: var(--bg-color);
+        font-family: DungGeunMo;
+        font-size: 2.25rem;
+        border: none;
+        border-radius: 0.4375rem;
+    }
+
+    .ir {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
     }
 `;
 
