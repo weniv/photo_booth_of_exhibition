@@ -62,7 +62,7 @@ export default function DownloadPage() {
                 <Preview src={imageUrl} alt="" />
                 <ButtonWrap>
                     <button onClick={downloadImageFile}>Image Download</button>
-                    <button onClick={downloadVideoFile}>Video Download</button>
+                    {/* <button onClick={downloadVideoFile}>Video Download</button> */}
                 </ButtonWrap>
             </FlexBox>
         </Wrap>
@@ -91,6 +91,8 @@ const Preview = styled.img`
 const ButtonWrap = styled.div`
     width: 80%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1.5rem;
 
     button {
